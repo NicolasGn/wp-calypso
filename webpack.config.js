@@ -153,6 +153,10 @@ const webpackConfig = {
 					MiniCssExtractPlugin.loader,
 					'css-loader',
 					{
+						loader: 'namespace-css-loader',
+						options: '.abc', // Just the namespace class
+					},
+					{
 						loader: 'sass-loader',
 						options: {
 							includePaths: [ path.join( __dirname, 'client' ) ],
